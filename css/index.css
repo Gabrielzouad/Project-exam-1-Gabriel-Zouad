@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+}
+a,
+li,
+button {
+  text-decoration: none;
+}
+
+/*==========================NAVIGATION BAR==========================*/
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbarLinks {
+  list-style: none;
+}
+
+.navbarLinks li {
+  display: inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 25px;
+  color: #00bcf2;
+  font-weight: 700;
+}
+
+.navbarLinks li a:visited {
+  color: #00bcf2;
+}
+
+.navbarLinks li a:hover {
+  color: #14708b;
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+.kontaktbutton {
+  padding: 10px 50px;
+  background-color: #14708b;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 25px;
+  margin: 0 25px 0 25px;
+}
+
+.kontaktbutton:hover {
+  background-color: #25a6cc;
+  transition: all 0.3s ease 0s;
+}
+
+/*==================HERO-SECTION===================*/
+
+.heroContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+}
+.heroLogo {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
