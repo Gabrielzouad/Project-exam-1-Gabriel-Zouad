@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+a,
+li,
+button {
+  text-decoration: none;
+}
+
+/*==========================NAVIGATION BAR==========================*/
+
+.headerLogo {
+  width: 90%;
+  height: auto;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbarLinks {
+  list-style: none;
+}
+
+.navbarLinks li {
+  display: inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 25px;
+  color: #00bcf2;
+  font-weight: 700;
+}
+
+.navbarLinks li a {
+  color: #00bcf2;
+}
+
+.navbarLinks li a:hover {
+  color: #14708b;
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+.kontaktbutton {
+  padding: 10px 30px;
+  background-color: #14708b;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 25px;
+  margin: 0 25px 0 25px;
+}
+
+.kontaktbutton:hover {
+  background-color: #25a6cc;
+  transition: all 0.3s ease 0s;
+}
+
+.hamburger {
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #00bcf2;
+  margin: 6px 0px;
+  content: "";
+  transition: 0.4s ease 0s;
+}
+
+.hamburger.active .bar {
+  opacity: 0;
+}
+
+.hamburger.active:before {
+  transform: rotate(-45deg) translate(0px, 12px);
+}
+.hamburger.active:after {
+  transform: rotate(45deg) translate(-3px, -15.5px);
+}
+
+.mobileLinks {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  top: -200px;
+  transition: all 0.3s ease 0.2s;
+}
+
+.mobileLinks a {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #14708b;
+}
+
+.mobileLinks.active {
+  top: 0px;
+}
+
+.mobileLinks a:hover {
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1253px) {
+  .navbar,
+  .kontaktbutton {
+    display: none;
+  }
+
+  .heroLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1253px) {
+  .hamburger,
+  .mobileLinks {
+    display: none;
+  }
+}
+
+/*==========================Detailed-info==========================*/
+
+.backArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  margin: 0 Auto;
+  width: 30%;
+  color: #00bcf2;
+}
+
+.arrowText {
+  font-size: 0.3em;
+  padding: 15px 0 0 15px;
+}
+.infoContainer {
+  display: block;
+}
+
+.prosjekt {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.prosjektBilde {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.detailedInfo h1 {
+  color: #14708b;
+  font-weight: bold;
+}
+
+.detailedInfo .dato {
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.modalActive {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.modal span {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 200px;
+  max-width: 750px;
+}
+
+@media only screen and (min-width: 800px) {
+  .prosjektBilde {
+    height: 300px;
+    width: 300px;
+  }
+
+  .modal img {
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 1253px) {
+  .backArrow {
+    justify-content: start;
+  }
+
+  .prosjekt {
+    width: 40%;
+    font-size: 1.5em;
+  }
+
+  .prosjektBilde {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+/*==========================FOOTER==========================*/
+
+.footer h5 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 567em) {
+  body {
+    margin-bottom: 800px;
+  }
+  .footer {
+    height: 600px;
+  }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #14708b;
+  color: white;
+  text-align: center;
+}
+footer ul {
+  padding: 0;
+  margin: 20px;
+}
+footer li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps iframe {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1253px) {
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row .col-6 {
+    text-align: left;
+  }
+
+  .footer {
+    height: 400px;
+  }
+
+  body {
+    margin-bottom: 500px;
+  }
+
+  .maps iframe {
+    width: 400px;
+  }
+}

@@ -9,10 +9,10 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
+        <img class="headerLogo" src="images/Ameta-logo.svg" alt="Ameta logo" />
+      </a>
       <nav class="navbar">
-        <a href="index.html">
-          <img src="images/Ameta-logo.svg" alt="Ameta logo" />
-        </a>
         <ul class="navbarLinks">
           <li><a href="index.html#tjenester">Tjenester</a></li>
           <li><a href="prosjekter.html">Projekter</a></li>
@@ -20,10 +20,22 @@
         </ul>
       </nav>
       <a class="kontaktbutton" href="kontakt.html">Kontakt</a>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
     </header>
-    <section>
-      <h1>Vi er <img src="images/Ameta-logo.svg" alt="ameta logo" /></h1>
-      <div>
+    <nav class="mobileLinks">
+      <a href="#tjenester">Tjenester</a>
+      <a href="prosjekter.html">Projekter</a>
+      <a href="omOss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <section class="viErAmeta">
+      <div class="ametaHeading">
+        <h1>Vi er</h1>
+        <img src="images/Ameta-logo.svg" alt="ameta logo" />
+      </div>
+      <div class="omAmeta">
         <p>
           Vi er et raskt voksende programvareselskap med kontor i Kristiansand. Vi lager programvare
           fortrinnsvis for bruk i infrastrukturprosjekter og i den «Blå næringen» - bidrar til en
@@ -35,9 +47,10 @@
         </p>
         <img src="images/om-oss-hero.png" alt="Database illustraition" />
       </div>
-      <div>
+
+      <h2>Vår historie</h2>
+      <div class="historie">
         <img src="images/om-oss-nettverk.png" alt="Nettverk illustraition" />
-        <h2>Vår historie</h2>
         <p>
           Vi ble etablert i 2016 med navnet Smart Inspection, som vi nå skiller oss ut ifra og får
           som en søster. Vi skal stå tett sammen som familie da det gir gode synergier. Smart
@@ -49,7 +62,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="jobbAmeta">
       <div>
         <h2>Jobb hos ameta</h2>
         <p>
@@ -58,18 +71,53 @@
           a galley of type and scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting, remaining
         </p>
+      </div>
+      <div>
         <img src="images/JobbHosOss.png" alt="Person working with data" />
       </div>
     </section>
 
-    <section>
-      <h2>Ansatte</h2>
-      <div>
-        <div class="blueline"></div>
-        <h3>AMETA</h3>
-        <div class="blueline"></div>
-      </div>
-      <div class="ansatte"></div>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <h5>Ameta Saas AS.</h5>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>
+                    Ikke nøl med å ta kontakt, enten du lurer på noe generelt eller spesifikt.
+                  </li>
+                  <li>Mail: <a href="mailto:">post@smartinspection.no</a></li>
+                  <li>tel: <a href="tel:">+47 38 79 58 40</a></li>
+                  <li>
+                    Ved hjelp av et kartutsnitt eller bilde vil vi kunne gi et nøyaktig estimat.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Kjøita 40</li>
+                  <li>4630 Kristiansand</li>
+                  <li>Norge</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="maps">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2105.320092414151!2d8.001909052025125!3d58.15162511183109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4638025b1af5cfa9%3A0xd3a83b67bf9c2f39!2sKj%C3%B8ita%2040%2C%204630%20Kristiansand!5e0!3m2!1sno!2sno!4v1653737749605!5m2!1sno!2sno"
+              width="200px"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>

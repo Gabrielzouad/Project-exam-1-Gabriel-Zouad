@@ -9,10 +9,10 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
+        <img class="headerLogo" src="images/Ameta-logo.svg" alt="Ameta logo" />
+      </a>
       <nav class="navbar">
-        <a href="index.html">
-          <img src="images/Ameta-logo.svg" alt="Ameta logo" />
-        </a>
         <ul class="navbarLinks">
           <li><a href="#tjenester">Tjenester</a></li>
           <li><a href="prosjekter.html">Projekter</a></li>
@@ -20,8 +20,16 @@
         </ul>
       </nav>
       <a class="kontaktbutton" href="kontakt.html">Kontakt</a>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
     </header>
-
+    <nav class="mobileLinks">
+      <a href="#tjenester">Tjenester</a>
+      <a href="prosjekter.html">Projekter</a>
+      <a href="omOss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
     <section>
       <div class="heroContainer">
         <div>
@@ -34,125 +42,190 @@
         </div>
       </div>
 
-      <div>
-        <h2>Tjenester vi leverer gjennom</h2>
-        <div id="Tjenester">
-          <div class="blueline"></div>
-          <h3>Ameta SaaS</h3>
-          <div class="blueline"></div>
+      <h2 class="tjenesterHeader">Tjenester vi leverer gjennom</h2>
+      <div id="tjenester" class="tjenesterHeader2">
+        <div class="blueline"></div>
+        <h3>AMETA SaaS</h3>
+        <div class="blueline"></div>
+      </div>
+      <div class="cards">
+        <div class="tjeneste-card">
+          <img src="images/production.svg" alt="produksjon illustrasjon" />
+          <div class="cardInfo">
+            <h4>Optimalisering av produksjon</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Optimalisering av produksjon</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/data-storage.svg" alt="data lagring illustrasjon" />
+          <div class="cardInfo">
+            <h4>Datalagring og tilgjengeliggjøring av data</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Datalagring og tilgjengeliggjøring av data</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/environment.svg" alt="remote løsning illustrasjon" />
+          <div class="cardInfo">
+            <h4>Remote løsning</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Remote løsning</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/dashboard.svg" alt="dashboard illustrasjon" />
+          <div class="cardInfo">
+            <h4>Dashbord</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Dashbord</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/security-camera.svg" alt="kamera illustrasjon" />
+          <div class="cardInfo">
+            <h4>Trafikktelling</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Trafikktelling</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/data-storage.svg" alt="fjernovervåking illustrasjon" />
+          <div class="cardInfo">
+            <h4>Fjernovervåking</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Fjernovervåking</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/environment.svg" alt="miljø illustrasjon" />
+          <div class="cardInfo">
+            <h4>Miljø og ytre miljø</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Miljø og ytre miljø</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
-        </div>
-        <div class="Tjeneste-card">
-          <img src="" alt="" />
-          <h4>Tilstandsbasert vedlikehold</h4>
-          <p>
-            For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
-            trygt og enkelt for deg!
-          </p>
+        <div class="tjeneste-card">
+          <img src="images/production.svg" alt="vedlikehold illustrasjon" />
+          <div class="cardInfo">
+            <h4>Tilstandsbasert vedlikehold</h4>
+            <p>
+              For at nettsiden din skal være synlig på nett må den hostes på en server. Det gjør vi
+              trygt og enkelt for deg!
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <article class="hvemAmeta">
-      <div>
+    <article class="hvaAmeta">
+      <div class="ametaInnhold">
         <h2>Hva er Ameta</h2>
         <p>
           Ameta SaaS har blitt til en skalerbar tjenesteplattform som kan brukes i alle bransjer.
           All data, interne som eksterne datakilder «tømmes i en vaskemaskin» som strukturerer og
           raffinerer for enkel integrering og API- administrasjon, IoT, analyse og
           forretningstranformasjon. Ved hjelp av maskinlæring og AI, så forbedres prosessene våre
-          kontinuerlig til beste for kundene våre. Ved siden av våre skreddersydde frontendprodukter
-          / applikasjoner, vil Ameta SaaS være hjertet i selskapet. Vi ønsker å skalere
-          tjenesteplattformen ved å finne partnere med domenekunnskap / bli en betydelig aktør i
-          andres verdikjede. Sammen driver vi fram de gode løsningene for kundene våre forbedrer
-          prosesser og løser utfordringer.
+          kontinuerlig til beste for kundene våre.
+        </p>
+        <p>
+          Ved siden av våre skreddersydde frontendprodukter / applikasjoner, vil Ameta SaaS være
+          hjertet i selskapet. Vi ønsker å skalere tjenesteplattformen ved å finne partnere med
+          domenekunnskap / bli en betydelig aktør i andres verdikjede. Sammen driver vi fram de gode
+          løsningene for kundene våre forbedrer prosesser og løser utfordringer.
         </p>
       </div>
     </article>
 
-    <section>
-      <div>
-        <div class="om-oss">
-          <div class="cyanline"></div>
-          <h3>Om oss</h3>
-          <div class="cyanline"></div>
-        </div>
-        <p>
-          Vi er et raskt voksende programvareselskap med kontor i Kristiansand. Vi lager programvare
-          fortrinnsvis for bruk i infrastrukturprosjekter og i den «Blå næringen» - bidrar til en
-          bærekraftig utvikling basert på havets ressurser.
-        </p>
-        <p>
-          I tett samarbeid med våre kunder har vi utviklet en All In One Plattform en unik skybasert
-          SaaS plattform som tar imot alle formater, forener og kommuniserer data på tvers av dagens
-          «siloer». Ikke bare en IOT-plattform, men også en plattform for Stor Data, operative data
-          og annen programvare. Ved å sammenstille data fra ulike kilder, åpnes en verden for
-          betydelig kundeverdi.
-        </p>
+    <section class="omOss">
+      <div class="omOssHeader">
+        <div class="cyanline"></div>
+        <h3>Om oss</h3>
+        <div class="cyanline"></div>
       </div>
+      <p>
+        Vi er et raskt voksende programvareselskap med kontor i Kristiansand. Vi lager programvare
+        fortrinnsvis for bruk i infrastrukturprosjekter og i den «Blå næringen» - bidrar til en
+        bærekraftig utvikling basert på havets ressurser.
+      </p>
+      <p>
+        I tett samarbeid med våre kunder har vi utviklet en All In One Plattform en unik skybasert
+        SaaS plattform som tar imot alle formater, forener og kommuniserer data på tvers av dagens
+        «siloer». Ikke bare en IOT-plattform, men også en plattform for Stor Data, operative data og
+        annen programvare. Ved å sammenstille data fra ulike kilder, åpnes en verden for betydelig
+        kundeverdi.
+      </p>
     </section>
 
     <div class="partnerSlider"></div>
 
-    <section>
+    <section class="ametaProsjekter">
       <h2>Våre prosjekter</h2>
-      <div class="projects"></div>
-      <button>se flere prosjekter</button>
+      <div class="prosjekter"></div>
+      <div>
+        <div class="sliderButton">
+          <a class="prev" onclick="plusProsjekt(-1)">&#10094;</a>
+          <a class="next" onclick="plusProsjekt(1)">&#10095;</a>
+        </div>
+        <button><a href="prosjekter.html">Se flere prosjekter</a></button>
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <h5>Ameta Saas AS.</h5>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>
+                    Ikke nøl med å ta kontakt, enten du lurer på noe generelt eller spesifikt.
+                  </li>
+                  <li>Mail: <a href="mailto:">post@smartinspection.no</a></li>
+                  <li>tel: <a href="tel:">+47 38 79 58 40</a></li>
+                  <li>
+                    Ved hjelp av et kartutsnitt eller bilde vil vi kunne gi et nøyaktig estimat.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Kjøita 40</li>
+                  <li>4630 Kristiansand</li>
+                  <li>Norge</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="maps">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2105.320092414151!2d8.001909052025125!3d58.15162511183109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4638025b1af5cfa9%3A0xd3a83b67bf9c2f39!2sKj%C3%B8ita%2040%2C%204630%20Kristiansand!5e0!3m2!1sno!2sno!4v1653737749605!5m2!1sno!2sno"
+              width="200px"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/hamburger.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

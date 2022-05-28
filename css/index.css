@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   font-family: "Outfit", sans-serif;
   margin: 0;
+  margin-bottom: 300px;
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 10%;
+  padding: 20px 10%;
 }
 a,
 li,
@@ -17,12 +21,18 @@ button {
 }
 
 /*==========================NAVIGATION BAR==========================*/
+
+.headerLogo {
+  width: 90%;
+  height: auto;
+}
 .navbar {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
+
 .navbarLinks {
   list-style: none;
 }
@@ -35,7 +45,7 @@ button {
   font-weight: 700;
 }
 
-.navbarLinks li a:visited {
+.navbarLinks li a {
   color: #00bcf2;
 }
 
@@ -46,7 +56,7 @@ button {
 }
 
 .kontaktbutton {
-  padding: 10px 50px;
+  padding: 10px 30px;
   background-color: #14708b;
   border: none;
   border-radius: 50px;
@@ -60,13 +70,94 @@ button {
   transition: all 0.3s ease 0s;
 }
 
+.hamburger {
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #00bcf2;
+  margin: 6px 0px;
+  content: "";
+  transition: 0.4s ease 0s;
+}
+
+.hamburger.active .bar {
+  opacity: 0;
+}
+
+.hamburger.active:before {
+  transform: rotate(-45deg) translate(0px, 12px);
+}
+.hamburger.active:after {
+  transform: rotate(45deg) translate(-3px, -15.5px);
+}
+
+.mobileLinks {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  top: -200px;
+  transition: all 0.3s ease 0.2s;
+}
+
+.mobileLinks a {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #14708b;
+}
+
+.mobileLinks.active {
+  top: 0px;
+}
+
+.mobileLinks a:hover {
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1253px) {
+  .navbar,
+  .kontaktbutton {
+    display: none;
+  }
+
+  .heroLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1253px) {
+  .hamburger,
+  .mobileLinks {
+    display: none;
+  }
+}
+
 /*==================HERO-SECTION===================*/
 
 .heroContainer {
+  padding: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  width: 70%;
+  margin: 0 auto;
 }
 
 .heroImage {
@@ -77,4 +168,273 @@ button {
   width: 100%;
   height: auto;
   cursor: pointer;
+}
+@media only screen and (max-width: 1253px) {
+  .heroContainer {
+    padding: 25px;
+  }
+}
+/*==================OM-AMETA===================*/
+
+.tjenesterHeader {
+  text-align: center;
+  margin: 0;
+  color: #00bcf2;
+}
+.tjenesterHeader2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tjenesterHeader2 h3 {
+  font-size: 2em;
+  color: #14708b;
+  text-align: center;
+}
+
+.blueline {
+  margin: 20px;
+  background-color: #14708b;
+  height: 0.2em;
+  width: 4em;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.tjeneste-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.tjeneste-card img {
+  width: 20%;
+  height: auto;
+  max-width: 150px;
+}
+
+.cardInfo {
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .tjeneste-card img {
+    display: none;
+  }
+
+  .tjeneste-card {
+    width: 100%;
+  }
+}
+/*=================Hvem-er-Ameta===================*/
+
+.hvaAmeta {
+  display: flex;
+  background-color: #14708b;
+  height: 50vh;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.ametaInnhold {
+  margin: 0 auto;
+  width: 50%;
+  color: whitesmoke;
+}
+
+.ametaInnhold p {
+  font-size: 0.7em;
+}
+
+.ametaInnhold h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.cyanline {
+  margin: 20px;
+  background-color: #00bcf2;
+  height: 0.2em;
+  width: 4em;
+}
+.omOss {
+  margin: 0 auto;
+  width: 50%;
+}
+.omOssHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #00bcf2;
+  text-align: center;
+}
+@media only screen and (min-width: 500px) {
+  .ametaInnhold p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1253px) {
+  .ametaInnhold p {
+    font-size: 1.2em;
+  }
+
+  .omOss p {
+    font-size: 1.2em;
+  }
+}
+
+/*=================Våre-prosjekter===================*/
+
+.ametaProsjekter {
+  margin-top: 10vh;
+  text-align: center;
+  padding-bottom: 10vh;
+}
+
+.ametaProsjekter h2 {
+  font-size: 2em;
+  color: #14708b;
+}
+
+.prosjekt {
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.prosjektTittel {
+  font-size: 1.5em;
+  color: #14708b;
+  font-weight: 600;
+}
+
+.prosjektBilde {
+  width: 300px;
+  height: 300px;
+}
+
+.ametaProsjekter button {
+  background-color: #14708b;
+  border-radius: 6px;
+  border-width: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 600;
+  height: 45px;
+  margin: 20px 0 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  width: 200px;
+}
+.ametaProsjekter button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sliderButton a {
+  margin: 50px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.sliderButton a:hover {
+  font-weight: 800;
+  color: #00bcf2;
+}
+
+@media only screen and (min-width: 1253px) {
+  .prosjektBilde {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+/*==========================FOOTER==========================*/
+
+.footer h5 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 567em) {
+  body {
+    margin-bottom: 800px;
+  }
+  .footer {
+    height: 600px;
+  }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #14708b;
+  color: white;
+  text-align: center;
+}
+footer ul {
+  padding: 0;
+  margin: 20px;
+}
+footer li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps iframe {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1253px) {
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row .col-6 {
+    text-align: left;
+  }
+
+  .footer {
+    height: 400px;
+  }
+
+  body {
+    margin-bottom: 500px;
+  }
+
+  .maps iframe {
+    width: 400px;
+  }
 }

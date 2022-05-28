@@ -9,10 +9,10 @@
   </head>
   <body>
     <header>
+      <a href="index.html">
+        <img class="headerLogo" src="images/Ameta-logo.svg" alt="Ameta logo" />
+      </a>
       <nav class="navbar">
-        <a href="index.html">
-          <img src="images/Ameta-logo.svg" alt="Ameta logo" />
-        </a>
         <ul class="navbarLinks">
           <li><a href="index.html#tjenester">Tjenester</a></li>
           <li><a href="prosjekter.html">Projekter</a></li>
@@ -20,33 +20,114 @@
         </ul>
       </nav>
       <a class="kontaktbutton" href="kontakt.html">Kontakt</a>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
     </header>
+    <nav class="mobileLinks">
+      <a href="#tjenester">Tjenester</a>
+      <a href="prosjekter.html">Projekter</a>
+      <a href="omOss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
 
     <section>
-      <div>
-        <h1>Vi håper å høre fra deg !</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.
-        </p>
-        <div>
+      <div class="kontakt">
+        <div class="kontaktInfo">
+          <h1>Vi håper å høre fra deg !</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <div class="formSection">
           <h2>Din melding</h2>
-          <form action="">
+          <form onsubmit="event.preventDefault(); validate();">
             <label for="bedriftnavn">Din Bedrift</label>
-            <input type="text" id="bedriftnavn" name="bedriftnavn" />
+            <input
+              type="text"
+              class="bedriftNavn"
+              name="bedrift navn"
+              id="navnInput"
+              placeholder="Ditt Navn"
+            />
+            <p class="error"></p>
+
             <label for="bedriftmail">Din Mail</label>
-            <input type="text" name="bedriftmail" id="bedriftmail" />
+            <input
+              type="text"
+              name="bedriftEmail"
+              id="emailInput"
+              class="bedriftEmail"
+              placeholder="Din Epost"
+            />
+            <p class="error"></p>
+
+            <label for="subject">Emne</label>
+            <input
+              type="text"
+              name="emne"
+              id="emneInput"
+              class="emneInput"
+              placeholder="Ditt Emne"
+            />
+            <p class="error"></p>
+
             <label for="melding">Din melding</label>
-            <input type="text" id="melding" name="melding" />
-            <input type="submit" value="submit" />
+            <textarea id="messageInput" placeholder="Din melding" rows="6"></textarea>
+            <p class="error"></p>
+
+            <input type="submit" id="sendt" class="button" value="SEND" />
           </form>
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <h5>Ameta Saas AS.</h5>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>
+                    Ikke nøl med å ta kontakt, enten du lurer på noe generelt eller spesifikt.
+                  </li>
+                  <li>Mail: <a href="mailto:">post@smartinspection.no</a></li>
+                  <li>tel: <a href="tel:">+47 38 79 58 40</a></li>
+                  <li>
+                    Ved hjelp av et kartutsnitt eller bilde vil vi kunne gi et nøyaktig estimat.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <ul class="list-unstyled">
+                  <li>Kjøita 40</li>
+                  <li>4630 Kristiansand</li>
+                  <li>Norge</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="maps">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2105.320092414151!2d8.001909052025125!3d58.15162511183109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4638025b1af5cfa9%3A0xd3a83b67bf9c2f39!2sKj%C3%B8ita%2040%2C%204630%20Kristiansand!5e0!3m2!1sno!2sno!4v1653737749605!5m2!1sno!2sno"
+              width="200px"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/hamburger.js"></script>
+    <script src="js/kontaktvalidation.js"></script>
   </body>
 </html>

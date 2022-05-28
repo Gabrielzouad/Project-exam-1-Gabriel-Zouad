@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   font-family: "Outfit", sans-serif;
   margin: 0;
@@ -8,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 10%;
+  padding: 20px 10%;
 }
 a,
 li,
@@ -16,12 +19,19 @@ button {
   text-decoration: none;
 }
 
+/*==========================NAVIGATION BAR==========================*/
+
+.headerLogo {
+  width: 90%;
+  height: auto;
+}
 .navbar {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
+
 .navbarLinks {
   list-style: none;
 }
@@ -34,21 +44,317 @@ button {
   font-weight: 700;
 }
 
-.navbarLinks li a:visited {
+.navbarLinks li a {
   color: #00bcf2;
 }
 
-.navbarLinks li a:active {
+.navbarLinks li a:hover {
   color: #14708b;
   font-weight: 800;
+  transition: all 0.3s ease 0s;
 }
 
 .kontaktbutton {
-  padding: 10px 50px;
+  padding: 10px 30px;
   background-color: #14708b;
   border: none;
   border-radius: 50px;
   color: white;
   font-size: 25px;
   margin: 0 25px 0 25px;
+}
+
+.kontaktbutton:hover {
+  background-color: #25a6cc;
+  transition: all 0.3s ease 0s;
+}
+
+.hamburger {
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #00bcf2;
+  margin: 6px 0px;
+  content: "";
+  transition: 0.4s ease 0s;
+}
+
+.hamburger.active .bar {
+  opacity: 0;
+}
+
+.hamburger.active:before {
+  transform: rotate(-45deg) translate(0px, 12px);
+}
+.hamburger.active:after {
+  transform: rotate(45deg) translate(-3px, -15.5px);
+}
+
+.mobileLinks {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  top: -200px;
+  transition: all 0.3s ease 0.2s;
+}
+
+.mobileLinks a {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #14708b;
+}
+
+.mobileLinks.active {
+  top: 0px;
+}
+
+.mobileLinks a:hover {
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1253px) {
+  .navbar,
+  .kontaktbutton {
+    display: none;
+  }
+
+  .heroLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1253px) {
+  .hamburger,
+  .mobileLinks {
+    display: none;
+  }
+}
+
+/*==========================vi-er-ameta==========================*/
+
+.viErAmeta {
+  margin: 0 auto;
+  width: 60%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.viErAmeta h2 {
+  color: #00bcf2;
+  font-size: 2em;
+  text-align: end;
+}
+.ametaHeading {
+  display: flex;
+  color: #00bcf2;
+  font-size: 2em;
+}
+
+.ametaHeading img {
+  width: 100%;
+  max-width: 200px;
+  margin-left: 15px;
+  height: auto;
+}
+.omAmeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.omAmeta img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 20px;
+}
+.historieHeader {
+  font-size: 1em;
+}
+.historie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.historie img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 400px;
+}
+/*==========================jobb-ameta==========================*/
+.jobbAmeta {
+  height: 50vh;
+  background-color: #14708b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  color: white;
+}
+
+.jobbAmeta img {
+  width: 100%;
+  height: auto;
+  display: none;
+  margin: 20px;
+  max-width: 700px;
+}
+
+.jobbAmeta p {
+  max-width: 700px;
+}
+
+@media only screen and (min-width: 1443px) {
+  .omAmeta {
+    flex-wrap: nowrap;
+  }
+
+  .historie {
+    flex-wrap: nowrap;
+  }
+  .jobbAmeta img {
+    display: block;
+  }
+  .omAmeta p {
+    font-size: 1em;
+  }
+  .historie p {
+    font-size: 1em;
+  }
+  .historie img {
+    margin-right: 20px;
+  }
+
+  .jobbAmeta p {
+    font-size: 1.5em;
+  }
+
+  .jobbAmeta h2 {
+    font-size: 2.5em;
+  }
+
+  .viErAmeta h2 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .omAmeta p {
+    font-size: 1.5em;
+  }
+  .historie p {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 1443px) {
+  .ametaHeading {
+    justify-content: center;
+    align-items: center;
+  }
+  .ametaHeading h1 {
+    font-size: 1em;
+  }
+
+  .ametaHeading img {
+    max-width: 150px;
+  }
+
+  .viErAmeta h2 {
+    text-align: center;
+  }
+}
+
+/*==========================FOOTER==========================*/
+
+.footer h5 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 567em) {
+  body {
+    margin-bottom: 800px;
+  }
+  .footer {
+    height: 600px;
+  }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #14708b;
+  color: white;
+  text-align: center;
+}
+footer ul {
+  padding: 0;
+  margin: 20px;
+}
+footer li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps iframe {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1253px) {
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row .col-6 {
+    text-align: left;
+  }
+
+  .footer {
+    height: 400px;
+  }
+
+  body {
+    margin-bottom: 500px;
+  }
+
+  .maps iframe {
+    width: 400px;
+  }
 }

@@ -1,29 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   font-family: "Outfit", sans-serif;
   margin: 0;
 }
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 10%;
+  padding: 20px 10%;
 }
-
 a,
 li,
 button {
   text-decoration: none;
 }
 
+/*==========================NAVIGATION BAR==========================*/
+
+.headerLogo {
+  width: 90%;
+  height: auto;
+}
 .navbar {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
+
 .navbarLinks {
   list-style: none;
 }
@@ -36,21 +44,267 @@ button {
   font-weight: 700;
 }
 
-.navbarLinks li a:visited {
+.navbarLinks li a {
   color: #00bcf2;
 }
 
-.navbarLinks li a:active {
+.navbarLinks li a:hover {
   color: #14708b;
   font-weight: 800;
+  transition: all 0.3s ease 0s;
 }
 
 .kontaktbutton {
-  padding: 10px 50px;
+  padding: 10px 30px;
   background-color: #14708b;
   border: none;
   border-radius: 50px;
   color: white;
   font-size: 25px;
   margin: 0 25px 0 25px;
+}
+
+.kontaktbutton:hover {
+  background-color: #25a6cc;
+  transition: all 0.3s ease 0s;
+}
+
+.hamburger {
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #00bcf2;
+  margin: 6px 0px;
+  content: "";
+  transition: 0.4s ease 0s;
+}
+
+.hamburger.active .bar {
+  opacity: 0;
+}
+
+.hamburger.active:before {
+  transform: rotate(-45deg) translate(0px, 12px);
+}
+.hamburger.active:after {
+  transform: rotate(45deg) translate(-3px, -15.5px);
+}
+
+.mobileLinks {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  top: -200px;
+  transition: all 0.3s ease 0.2s;
+}
+
+.mobileLinks a {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #14708b;
+}
+
+.mobileLinks.active {
+  top: 0px;
+}
+
+.mobileLinks a:hover {
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1253px) {
+  .navbar,
+  .kontaktbutton {
+    display: none;
+  }
+
+  .heroLogo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1253px) {
+  .hamburger,
+  .mobileLinks {
+    display: none;
+  }
+}
+
+/*==========================kontakt-info==========================*/
+
+.kontakt {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.kontaktInfo h1 {
+  font-size: 2em;
+  color: #14708b;
+}
+
+/*==========================form==========================*/
+.error {
+  color: red;
+  text-decoration: underline;
+}
+
+.formSection {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 400px;
+}
+
+.formSection h2 {
+  text-align: center;
+  color: #14708b;
+}
+label {
+  display: block;
+  margin: 5px 0px;
+}
+
+input {
+  height: 20px;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.button {
+  margin: 10px 0;
+  background-color: #14708b;
+  border: 1px solid rgba(10, 88, 167, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(4, 77, 149, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #25a6cc;
+}
+
+@media only screen and (min-width: 1253px) {
+  .kontakt {
+    flex-wrap: nowrap;
+    padding-top: 200px;
+  }
+
+  .kontaktInfo {
+    width: 50%;
+    font-size: 1.5em;
+  }
+}
+
+/*==========================FOOTER==========================*/
+
+.footer h5 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 567em) {
+  body {
+    margin-bottom: 800px;
+  }
+  .footer {
+    height: 600px;
+  }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #14708b;
+  color: white;
+  text-align: center;
+}
+footer ul {
+  padding: 0;
+  margin: 20px;
+}
+footer li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maps iframe {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1253px) {
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row .col-6 {
+    text-align: left;
+  }
+
+  .footer {
+    height: 400px;
+  }
+
+  body {
+    margin-bottom: 500px;
+  }
+
+  .maps iframe {
+    width: 400px;
+  }
 }
