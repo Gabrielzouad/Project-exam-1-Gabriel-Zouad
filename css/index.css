@@ -98,10 +98,12 @@ button {
 }
 
 .hamburger.active:before {
-  transform: rotate(-45deg) translate(0px, 12px);
+  transform: rotate(-45deg)
+    translate(0px, 12px);
 }
 .hamburger.active:after {
-  transform: rotate(45deg) translate(-3px, -15.5px);
+  transform: rotate(45deg)
+    translate(-3px, -15.5px);
 }
 
 .mobileLinks {
@@ -212,7 +214,8 @@ button {
   width: 40%;
   margin: 10px;
   padding: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2)
+    0px 7px 29px 0px;
   border-radius: 10px;
 }
 
@@ -240,7 +243,6 @@ button {
 .hvaAmeta {
   display: flex;
   background-color: #14708b;
-  height: 50vh;
   align-items: center;
   margin-bottom: 5vh;
 }
