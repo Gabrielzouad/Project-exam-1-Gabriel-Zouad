@@ -181,7 +181,7 @@ button {
 .tjenesterHeader {
   text-align: center;
   margin: 0;
-  color: #00bcf2;
+  color: #0e4d60;
 }
 .tjenesterHeader2 {
   display: flex;
@@ -190,13 +190,13 @@ button {
 }
 .tjenesterHeader2 h3 {
   font-size: 2em;
-  color: #14708b;
+  color: #0e4d60;
   text-align: center;
 }
 
 .blueline {
   margin: 20px;
-  background-color: #14708b;
+  background-color: #0e4d60;
   height: 0.2em;
   width: 4em;
 }
@@ -277,7 +277,7 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  color: #00bcf2;
+  color: #0e4d60;
   text-align: center;
 }
 @media only screen and (min-width: 500px) {

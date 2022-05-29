@@ -97,10 +97,12 @@ button {
 }
 
 .hamburger.active:before {
-  transform: rotate(-45deg) translate(0px, 12px);
+  transform: rotate(-45deg)
+    translate(0px, 12px);
 }
 .hamburger.active:after {
-  transform: rotate(45deg) translate(-3px, -15.5px);
+  transform: rotate(45deg)
+    translate(-3px, -15.5px);
 }
 
 .mobileLinks {
@@ -156,13 +158,13 @@ button {
 }
 
 .viErAmeta h2 {
-  color: #00bcf2;
+  color: #0e4d60;
   font-size: 2em;
   text-align: end;
 }
 .ametaHeading {
   display: flex;
-  color: #00bcf2;
+  color: #0e4d60;
   font-size: 2em;
 }
 
