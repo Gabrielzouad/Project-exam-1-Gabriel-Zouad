@@ -16,4 +16,7 @@ Ameta contacted me, they wanted a new website for theyre data processing company
 - [CSS]
 - [javascript]
 
+# live version
+https://dulcet-malasada-f62bdb.netlify.app
+
 
